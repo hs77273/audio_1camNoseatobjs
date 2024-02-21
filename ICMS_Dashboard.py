@@ -289,6 +289,10 @@ class MyWindow(QWidget):
         if event.key() == Qt.Key_Q:
             self.stop_cabinmonitoring()
             self.stop_boardmonitoring()
+        elif event.key() == Qt.Key_Space:
+            self.start_boardmonitoring()
+        elif event.key() == Qt.Key_Shift:
+            self.start_cabinmonitoring()
 
     def display_frame(self, frame):
         if self.camera_widget is None or self.camera_widget.isHidden():
